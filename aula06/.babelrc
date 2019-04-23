@@ -1,0 +1,7 @@
+{
+    //preset-env = vai entender qual o ambiente que está trabalhando com este projeto (browser)
+    "presets": ["@babel/preset-env"],
+    "plugins": ["@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-async-to-generator"
+    ]
+}  
