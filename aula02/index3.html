@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "app">
+        <input type="text" name = "textBox" id = "textBox" class="textBox"/>
+        <button class="buttons">Insert</button>
+        <input type="text" name="textBox2" id="textBox2" class="textBox"/>
+    </div>
+
+    <div id="app2">
+        <button class="buttons2">Hello! Click Me!</button>
+    </div>
+
+    <script>
+    
+        var inputElement = document.getElementById('textBox2');
+        console.log(inputElement);
+
+        var inputElements = document.getElementsByTagName('input');
+        console.log(inputElements);
+
+        var inputElements = document.getElementsByTagName('input')[1];
+        console.log(inputElements);
+
+        var inputElementsClass = document.getElementsByClassName('textBox')[0];
+        console.log(inputElementsClass);
+
+        var inputElementQS = document.querySelector('body div#app input');
+        console.log(inputElementQS);
+
+        var inputElementQS = document.querySelector('body div#app input[name = textBox2]');
+        console.log(inputElementQS);
+
+        var inputElementQS = document.querySelectorAll('body div#app input');
+        console.log(inputElementQS);
+
+        var btnElement = document.querySelector('body div#app2 button.buttons2');
+        var inputElementText = document.querySelector('body div#app input[name = textBox]');
+
+      /*  btnElement.onclick = function(){
+            alert('Button was clicked!');
+        } */
+
+        btnElement.onclick = function(){
+            var text = inputElementText.value;
+            alert(text);
+        }
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+       
+    </ul>
+
+    <script>
+        //lista de nomes
+        var names = ['Andre', 'Leticia', 'Rhuan'];
+        //busca a tag ul no body do documento
+        //e guarda na variavel list
+        var list = document.querySelector('ul');
+
+        //cria um for para percorrer a lista
+        //a cada passada, ele armazena o elemento no name
+        for(name of names){
+            //cria o elemento com tag igual a li
+            //e armazena ele na variavel chamada item
+            var item = document.createElement('li');
+            //cria o texto do item na lista
+            //pega o nome atual da lista
+            var text = document.createTextNode(name);
+            //adiciona o nome dentro do item
+            item.appendChild(text);
+            //adiciona o item dentro da lista
+            list.appendChild(item);
+        }
+    </script>
+</body>
+
+</html>

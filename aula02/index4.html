@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="classJSDOM">
+        <input id="name"/>
+
+        <div class="test"></div>
+       </div>
+
+    <script>
+        var link = document.createElement('a');
+
+        link.setAttribute('href','https://faculdadeam.edu.br');
+        
+        link.setAttribute('title','Site da AMF');
+
+        link.setAttribute('target','_blank');
+
+        var text = document.createTextNode('Acessar site da AMF');
+
+        link.appendChild(text);
+
+        var divElement = document.querySelector('#classJSDOM');
+
+        divElement.appendChild(link);
+
+        var input = document.querySelector('#name');
+       // divElement.removeChild(input);
+
+
+       var div = document.querySelector('.test');
+
+       div.style.width = '100px';
+       div.style.height = '100px';
+       div.style.backgroundColor = '#000';
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="text">
+    <button onclick="add()">Add</button>
+
+    <ul>
+       
+    </ul>
+
+    <script>
+        //lista de nomes
+        var names = ['Andre', 'Leticia', 'Rhuan'];
+        //busca a tag ul no body do documento
+        //e guarda na variavel list
+        var list = document.querySelector('ul');
+        //aqui eu to pegando o input
+        var text = document.querySelector('input');
+        //essa é a minha funcao que é disparada quando
+        //o botao é clicado
+
+        function add() {
+            //essa funcao adiciona um item na lista
+            //esse texto vem do input 
+            addItem(text.value);
+            //apagar o texto do input
+            text.value = "";
+        }
+
+        function addItem(text){
+             //cria o elemento com tag igual a li
+            //e armazena ele na variavel chamada item
+            var item = document.createElement('li');
+            //cria o texto do item na lista
+            //pega o nome atual da lista
+            var text = document.createTextNode(text);
+            //adiciona o nome dentro do item
+            item.appendChild(text);
+            //adiciona o item dentro da lista
+            list.appendChild(item); 
+        }
+
+        //cria um for para percorrer a lista
+        //a cada passada, ele armazena o elemento no name
+        for(name of names){
+            //adiciona os nomes da nossa lista
+           addItem(name);
+        }
+    </script>
+</body>
+
+</html>
