@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var x = 10, y = 5;
+        var result = x + y;
+        console.log(result);
+        
+        var result2 = x * y;
+        var result3 = x % y;
+        x *=  y;
+
+
+        function sum  (num1, num2) {
+            var resultSum = num1 + num2;
+            return resultSum; 
+        }
+        console.log (sum(2,5));
+
+        function returnAge (age)
+        {
+            if(age === 28){
+                return 'Age of Philip';
+            }else {
+                return 'Another age';
+            }
+            switch (age){
+                case 28: 
+                    return 'Age of Philip';
+                case 30:
+                    return 'Age of Ezequiel';
+                default:
+                    return 'No age'; 
+            }
+        }
+
+        var sex = 'Male', age = 25;
+
+        if(sex == 'Male' && age >= 18){
+            console.log("You can drink!");
+        }
+
+        var test = (sex == 'Male' && age >= 18);
+        console.log(test);
+
+        var test2 = (sex == 'Male') ? 'Male' : 'Female';
+        console.log (test2);
+
+    </script>
+
+</body>
+</html>

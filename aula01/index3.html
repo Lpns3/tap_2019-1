@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+/*        for(i = 0; i< 5; i++){
+            console.log(i);
+        }
+    function showSomething(){
+        console.log('Hello World');
+    }
+    */
+   // setInterval(showSomething, 1000);
+    //setTimeout (showSomething, 5000);
+
+     var numbers = [0, 2, 4];
+    // console.log(numbers[2]);
+     var food = new Array();
+     food[0] = 'Barbecue';
+     food[1] = 'French fries';
+    food[2] = "Ceaser Salad with eggs and sweet potatoes";
+
+    console.log(food);
+
+    food.push("Mix of meat");
+    console.log(food);
+
+    food.unshift("Lasagna");
+    console.log(food);
+
+    console.log(food.length);
+    
+    food.pop();
+    console.log(food);
+
+    food.shift();
+    console.log(food);
+
+    food.indexOf("French Fries");
+
+    food.sort();
+    console.log(food);
+
+    function OrderNumbers (a, b){
+        return a - b;
+    }    
+    /*
+    var megasena = new Array ();
+    megasena = [2, 4 , 7, 1, 3, 9];
+    megasena.sort();
+    console.log(megasena);
+
+    var sorteio = Math.ceil(Math.random() * 60);
+    console.log(sorteio);
+    */
+
+    var sort;
+    var megasena = new Array ();
+
+    var i = 0;
+    while(i < 6){
+        sort = Math.ceil(Math.random()*60);
+        if(megasena.indexOf(sort) < 0){
+            megasena.push(sort);
+            i++;
+        }
+        megasena.sort(OrderNumbers);
+        console.log(megasena);
+    }
+    </script>
+    
+</body>
+</html>
