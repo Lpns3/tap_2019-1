@@ -1,0 +1,4 @@
+{
+    //vai entender qual ambiente está sendo trabalhado (navegador)
+    "presets": ["@babel/preset-env"]
+}
